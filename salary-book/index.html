@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – Salary Book</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+    body { background: #f5f7fa; color: #1e293b; padding: 16px; padding-top: 70px; padding-bottom: 30px; }
+    .header {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: rgba(37, 211, 102, 0.92); color: white;
+      padding: 14px 18px; display: flex; align-items: center;
+      z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .back-btn {
+      background: rgba(255,255,255,0.2); border: none; border-radius: 50%;
+      width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+      color: white; cursor: pointer; margin-right: 12px;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.35); transform: scale(1.08); }
+    .header-title { font-size: 20px; font-weight: 700; }
+    .content { background: white; border-radius: 16px; padding: 20px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); line-height: 1.6; }
+    .content p { margin-bottom: 14px; }
+    .highlight { background: #e8fef0; padding: 2px 5px; border-radius: 4px; font-weight: 600; color: #007a3d; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <button class="back-btn" onclick="window.history.back()">
+      <i class="fa fa-arrow-left"></i>
+    </button>
+    <div class="header-title">Privacy Policy</div>
+  </div>
+
+  <div class="content">
+    <p><strong>Last updated:</strong> January 18, 2026</p>
+
+    <p>Hi, I’m Deepak — developer of <strong>Salary Book</strong>. This app helps you track salary and attendance — 100% offline.</p>
+
+    <p>✅ <span class="highlight">Your data never leaves your phone.</span><br>
+       • All entries are saved locally (IndexedDB)<br>
+       • No cloud, no account, no tracking<br>
+       • Uninstall = automatic data deletion</p>
+
+    <p>📱 <span class="highlight">About Ads</span><br>
+       • We use <strong>Google AdMob</strong> to show small banner ads<br>
+       • Ads use your <strong>Advertising ID</strong> (non-personalized)<br>
+       • You can reset or disable ad personalization in:<br>
+         <em>Phone Settings → Google → Ads</em></p>
+
+    <p>🔒 <span class="highlight">Security</span><br>
+       • Biometric lock (fingerprint/face) protects your data<br>
+       • No internet used for saving or syncing records</p>
+
+    <p>📧 Questions? Email me: <strong>diagnolite.apps@gmail.com</strong></p>
+    <p>Thanks for using Salary Book!<br>— Deepak Kumar</p>
+  </div>
+</body>
+</html>

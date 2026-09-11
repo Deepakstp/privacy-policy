@@ -6,24 +6,33 @@
   <title>Privacy Policy – Salary Book</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
-    body { background: #f5f7fa; color: #1e293b; padding: 16px; padding-top: 70px; padding-bottom: 30px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    body { background: #f8fafc; color: #1e293b; padding: 16px; padding-top: 75px; padding-bottom: 40px; }
     .header {
       position: fixed; top: 0; left: 0; right: 0;
-      background: rgba(37, 211, 102, 0.92); color: white;
-      padding: 14px 18px; display: flex; align-items: center;
-      z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: #0f172a; color: white;
+      padding: 14px 20px; display: flex; align-items: center;
+      z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
     .back-btn {
-      background: rgba(255,255,255,0.2); border: none; border-radius: 50%;
+      background: rgba(255,255,255,0.15); border: none; border-radius: 50%;
       width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
-      color: white; cursor: pointer; margin-right: 12px;
+      color: white; cursor: pointer; margin-right: 14px;
     }
-    .back-btn:hover { background: rgba(255,255,255,0.35); transform: scale(1.08); }
-    .header-title { font-size: 20px; font-weight: 700; }
-    .content { background: white; border-radius: 16px; padding: 20px; box-shadow: 0 3px 10px rgba(0,0,0,0.08); line-height: 1.6; }
-    .content p { margin-bottom: 14px; }
-    .highlight { background: #e8fef0; padding: 2px 5px; border-radius: 4px; font-weight: 600; color: #007a3d; }
+    .back-btn:hover { background: rgba(255,255,255,0.3); }
+    .header-title { font-size: 19px; font-weight: 700; }
+    .content {
+      max-width: 820px; margin: 0 auto; background: white;
+      border-radius: 16px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      line-height: 1.65; border: 1px solid #e2e8f0;
+    }
+    h2 { font-size: 17px; margin-top: 22px; margin-bottom: 10px; color: #0f172a; border-left: 4px solid #10b981; padding-left: 10px; }
+    p { margin-bottom: 14px; font-size: 14.5px; color: #334155; }
+    ul { margin-left: 20px; margin-bottom: 16px; font-size: 14.5px; color: #334155; }
+    li { margin-bottom: 8px; }
+    .highlight { background: #ecfdf5; padding: 3px 8px; border-radius: 6px; font-weight: 600; color: #065f46; border: 1px solid #a7f3d0; }
+    .notice-box { background: #f1f5f9; border-left: 4px solid #3b82f6; padding: 12px 16px; border-radius: 6px; margin: 16px 0; font-size: 14px; }
+    .footer { margin-top: 30px; padding-top: 18px; border-top: 1px solid #e2e8f0; font-size: 13.5px; color: #64748b; }
   </style>
 </head>
 <body>
@@ -31,31 +40,62 @@
     <button class="back-btn" onclick="window.history.back()">
       <i class="fa fa-arrow-left"></i>
     </button>
-    <div class="header-title">Privacy Policy</div>
+    <div class="header-title">Privacy Policy — Salary Book</div>
   </div>
 
   <div class="content">
-    <p><strong>Last updated:</strong> January 18, 2026</p>
+    <p><strong>Effective Date:</strong> September 11, 2026</p>
+    <p><strong>App:</strong> Salary Book (com.diagnolite.salarybook)</p>
+    <p><strong>Developer:</strong> Deepak Kumar (Diagnolite)</p>
 
-    <p>Hi, I’m Deepak — developer of <strong>Salary Book</strong>. This app helps you track salary and attendance — 100% offline.</p>
+    <div class="notice-box">
+      <strong>Core Privacy Promise:</strong> Salary Book is an offline-first employee wage, attendance, and overtime tracking application. Your financial data, attendance dates, and salary figures belong strictly to you and remain stored locally on your device.
+    </div>
 
-    <p>✅ <span class="highlight">Your data never leaves your phone.</span><br>
-       • All entries are saved locally (IndexedDB)<br>
-       • No cloud, no account, no tracking<br>
-       • Uninstall = automatic data deletion</p>
+    <h2>1. Data Collection & Local Storage</h2>
+    <p>We do not operate remote servers to collect, upload, or sell your personal records. All data you input is handled strictly as follows:</p>
+    <ul>
+      <li><strong>Local Database (SQLite):</strong> All attendance records, shift timings, overtime hours, advances, and profile details are stored locally inside the app's secure private storage on your phone.</li>
+      <li><strong>Device-Bound:</strong> If you uninstall the app or clear app data via Android Settings without creating a manual backup, all local records are permanently wiped.</li>
+    </ul>
 
-    <p>📱 <span class="highlight">About Ads</span><br>
-       • We use <strong>Google AdMob</strong> to show small banner ads<br>
-       • Ads use your <strong>Advertising ID</strong> (non-personalized)<br>
-       • You can reset or disable ad personalization in:<br>
-         <em>Phone Settings → Google → Ads</em></p>
+    <h2>2. App Permissions & Sensitive Features</h2>
+    <p>Salary Book requests only the bare minimum permissions necessary for user-requested operations:</p>
+    <ul>
+      <li><strong>Notifications (POST_NOTIFICATIONS):</strong> Used solely to send optional daily attendance logging reminders and salary pay-day alerts scheduled by you.</li>
+      <li><strong>Biometric / Fingerprint Authentication:</strong> Used exclusively to unlock the app locally via Android's native BiometricPrompt API. Your biometric data is encrypted by your device hardware and is never accessible to the app.</li>
+      <li><strong>Location Notice:</strong> Salary Book <strong>does not</strong> track, collect, or store your GPS location. No location permissions are requested.</li>
+    </ul>
 
-    <p>🔒 <span class="highlight">Security</span><br>
-       • Biometric lock (fingerprint/face) protects your data<br>
-       • No internet used for saving or syncing records</p>
+    <h2>3. Cloud Backup (Optional & User-Initiated)</h2>
+    <p>If you choose to use the <strong>Google Drive Cloud Backup</strong> feature:</p>
+    <ul>
+      <li>The app communicates directly with official Google Drive APIs via OAuth 2.0 authentication.</li>
+      <li>Backup files are stored exclusively inside your private Google Drive AppData folder, isolated from any external access.</li>
+      <li>Backups only run when manually triggered or when auto-backup is explicitly enabled by you.</li>
+    </ul>
 
-    <p>📧 Questions? Email me: <strong>diagnolite.apps@gmail.com</strong></p>
-    <p>Thanks for using Salary Book!<br>— Deepak Kumar</p>
+    <h2>4. Advertising & Third-Party SDKs</h2>
+    <p>Salary Book utilizes Google AdMob to serve non-intrusive advertisements:</p>
+    <ul>
+      <li><strong>Google Mobile Ads (AdMob):</strong> AdMob may collect pseudonymous identifiers such as Android Advertising ID (AAID) and basic device telemetry to serve advertisements in compliance with Google Play Developer Program Policies.</li>
+      <li><strong>User Messaging Platform (UMP):</strong> In eligible regions (e.g., EEA/UK), users are presented with a consent dialog to manage personalized vs. non-personalized ad preferences.</li>
+      <li><strong>Data Segregation:</strong> Your salary calculations, attendance dates, and notes are never shared with advertisers or third-party networks.</li>
+    </ul>
+
+    <h2>5. Children's Privacy</h2>
+    <p>Salary Book is intended for working professionals and individuals managing payroll or attendance. It is not directed to children under the age of 13, and we do not knowingly collect personal information from children.</p>
+
+    <h2>6. Contact Us</h2>
+    <p>If you have any questions or feedback regarding this Privacy Policy, please contact:</p>
+    <p>
+      <strong>Developer:</strong> Deepak Kumar<br>
+      <strong>Email:</strong> <a href="mailto:diagnolite.apps@gmail.com" style="color: #2563eb; text-decoration: none;">diagnolite.apps@gmail.com</a>
+    </p>
+
+    <div class="footer">
+      © 2026 Salary Book. All rights reserved. Built with privacy and user data sovereignty in mind.
+    </div>
   </div>
 </body>
 </html>
